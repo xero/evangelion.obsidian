@@ -1,28 +1,6 @@
-This is a sample theme for Obsidian ([https://obsidian.md](https://obsidian.md/)).
+evangelion theme for [obsidian](https://obsidian.md)
 
-## First Time publishing a theme?
-
-### Quick start
-
-<img width="244" alt="Pasted image 20220822135601" src="https://user-images.githubusercontent.com/693981/186000386-4f4da987-fcaf-4aa5-aed4-e34b5901255d.png">
-
-First, choose **Use this template**. That will create a copy of this repository (repo) under your Github profile. Then, you will want to _clone_ your new repository to your computer.
-
-Once you have the repo locally on your computer, there are a couple of placeholder fields you will need to fill in.
-
-1. Inside the `manifest.json` file, change the "name" field to whatever you want the name of your theme to be. For example:
-
-  ```json
-  {
-    "name": "Moonstone",
-    "version": "0.0.0",
-    "minAppVersion": "1.0.0"
-  }
-  ```
-
-2. Also inside the manifest.json file, you can include your name under next to the "author" field.
-
-After you have those fields configured, all that's left to do is add your styles! All of your CSS needs to be inside the file `theme.css` which is located at root of your repository.
+# TODO
 
 ## Adding your theme to the Theme Gallery
 
@@ -44,7 +22,7 @@ If your theme is getting more and more complex, you might want to start thinking
 ### Steps for releasing the initial version of your theme (1.0.0)
 
 1. From your theme's repository, click on "Releases".
-   
+
 <img width="235" alt="Pasted image 20220822145001" src="https://user-images.githubusercontent.com/693981/186000441-287a1a97-65f6-4b5f-ba66-810ceae91cd3.png">
 
 2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
@@ -67,9 +45,9 @@ If your theme is getting more and more complex, you might want to start thinking
     "1.0.0": "0.16.0"
   }
   ```
-  
+
   This means that version 1.0.0 of your theme is compatible with version 0.16.0 of Obsidian. For the initial release of your theme, you shouldn't need to make any changes to this file.
- 
+
 ### Steps for releasing new versions
 
 Releasing a new version of your theme is the same as releasing the initial version.
@@ -86,7 +64,7 @@ Releasing a new version of your theme is the same as releasing the initial versi
 4. Click "Publish Release."
 5. Update the `versions.json` file in your repository. For the initial release of your theme, you probably didn't need to make any changes to the `versions.json` file. When you release subsequent versions of your theme; however, it's best practice to include the new version as entry in the versions.json file. So this might look like:
   ```json
-  {  
+  {
 		"1.0.0": "0.16.0",
 		"1.0.1": "0.16.0"
   }

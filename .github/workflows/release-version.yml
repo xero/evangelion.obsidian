@@ -1,10 +1,10 @@
-name: Publish new theme version
+name: publish new evangelion theme version
 
 on:
   push:
-    # Sequence of patterns matched against refs/tags
+    # patterns matched against refs/tags
     tags:
-      - "*" # Push events to matching any tag format, i.e. 1.0, 20.15.10
+      - "*" # push events to matching any tag format, i.e. 1.0, 20.15.10
 
 jobs:
   build:
@@ -12,12 +12,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Bundle
+      - name: bundle
         id: bundle
         run: |
           ls
           echo "::set-output name=tag_name::$(git tag --sort version:refname | tail -n 1)"
-      - name: Create Release
+      - name: create release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -28,7 +28,7 @@ jobs:
           release_name: ${{ github.ref }}
           draft: false
           prerelease: false
-      - name: Upload manifest.json
+      - name: upload manifest.json
         id: upload-manifest
         uses: actions/upload-release-asset@v1
         env:
@@ -38,7 +38,7 @@ jobs:
           asset_path: ./manifest.json
           asset_name: manifest.json
           asset_content_type: application/json
-      - name: Upload theme.css
+      - name: upload theme.css
         id: upload-css
         uses: actions/upload-release-asset@v1
         env:
