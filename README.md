@@ -1,5 +1,9 @@
 evangelion theme for [obsidian](https://obsidian.md)
 
+## preview
+
+![screenshot](preview.jpg)
+
 # TODO
 
 ## Adding your theme to the Theme Gallery
