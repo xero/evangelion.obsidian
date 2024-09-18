@@ -4,9 +4,9 @@ body,
   --background-modifier-border: #b968fc;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: #151515;
-  --background-modifier-error-hover: ##db6088;
+  --background-modifier-error-hover: #db6088;
   --background-modifier-error-rgb: 61, 0, 0;
-  --background-modifier-error: ##db6088;
+  --background-modifier-error: #db6088;
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
   --background-modifier-form-field: rgba(0, 0, 0, 0.3);
   --background-modifier-success: #8edf5f;
@@ -72,6 +72,56 @@ body,
   --checkbox-radius: 0px;
 }
 
+.callout[data-callout="tip"],
+.callout[data-callout="hint"] {
+  --callout-color: var(--callout-tip);
+  --callout-done-color: #201430;
+  --callout-icon: lucide-flame;
+}
+
+.callout[data-callout="bug"],
+.callout[data-callout="default"],
+.callout[data-callout="note"],
+.callout[data-callout="error"],
+.callout[data-callout="danger"],
+.callout[data-callout="fail"],
+.callout[data-callout="failure"],
+.callout[data-callout="missing"] {
+	background: #db6088;
+  --callout-color: #201430;
+	color: #201430;
+}
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+	background: #9cda7c;
+  --callout-color: #201430;
+	color: #201430;
+}
+.callout[data-callout="important"],
+.callout[data-callout="info"],
+.callout[data-callout="warning"],
+.callout[data-callout="summary"],
+.callout[data-callout="abstract"],
+.callout[data-callout="tldr"],
+.callout[data-callout="caution"] {
+	background: #e6bb85;
+  --callout-color: #201430;
+	color: #201430;
+}
+.callout[data-callout="example"],
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"],
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="todo"],
+.callout[data-callout="attention"],
+.callout[data-callout="quote"] {
+	background: #ab92fc;
+  --callout-color: #201430;
+	color: #201430;
+}
 /*------- TEXT FIXES -------*/
 em,
 .cm-em,
@@ -320,8 +370,8 @@ blockquote {
 
 .omnisearch-result__counter {
   color: #3add04 !important;
-	background: #951bfa;
-	padding: 2px;
+  background: #951bfa;
+  padding: 2px;
 }
 
 .omnisearch-result__body {
