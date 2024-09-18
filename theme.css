@@ -1,4 +1,72 @@
-body {
+body,
+.theme-light,
+.theme-dark {
+	--background-modifier-border: #b968fc;
+	--background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+	--background-modifier-cover: #151515;
+	--background-modifier-error-hover: ##db6088;
+	--background-modifier-error-rgb: 61, 0, 0;
+	--background-modifier-error: ##db6088;
+	--background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
+	--background-modifier-form-field: rgba(0, 0, 0, 0.3);
+	--background-modifier-success: #8edf5f;
+	--background-primary-alt: #39274c;
+	--background-primary: #201430;
+	--background-secondary-alt: #483160;
+	--background-secondary: #452f5c;
+
+	--divider-color-hover: #ce67f0;
+	--divider-color: #9f50e1;
+	--divider-vertical-height: 1px;
+	--divider-width-hover: 1px;
+	--divider-width: 1px;
+	--highlight-mix-blend-mode: lighten;
+	--interactive-accent-hover: #ce67f0;
+	--interactive-accent-rgb: 135, 95, 175;
+	--interactive-accent: #9f50e1;
+	--interactive-hover: #444444;
+	--interactive-normal: #43492a;
+	--interactive-success: #8edf5f;
+	--ribbon-background: #483160;
+	--scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
+	--scrollbar-bg: rgba(255, 255, 255, 0.05);
+	--scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+
+	--link-color-hover: #ce67f0;
+	--link-color: #b968fc;
+	--link-decoration: dashed;
+	--link-external-color-hover: #ce67f0;
+	--link-external-color: #b968fc;
+	--link-external-decoration: wavy;
+	--link-unresolved-color: #666;
+	--link-unresolved-decoration-color: #9f50e1;
+
+	--text-accent-hover: #875faf;
+	--text-accent: #875faf;
+	--text-error-hover: #db6088;
+	--text-error: #db6088;
+	--text-faint: #ada4a0;
+	--text-highlight-bg-active: rgba(135, 255, 95, 1);
+	--text-highlight-bg: rgba(135, 255, 95, 0.85);
+	--text-muted-rgb: 153, 153, 153;
+	--text-muted: #d4d4d4;
+	--text-normal: #e1d6f8;
+	--text-on-accent: #d4d4d4;
+	--text-selection: #9cda7c;
+
+	--code-background: #452f5c;
+	--code-comment: #a1a0ad;
+	--code-function: #9cda7c;
+	--code-important: #8bd450;
+	--code-keyword: #87ff5f;
+	--code-normal: #e1d6f8;
+	--code-operator: #b968fc;
+	--code-property: #ce67f0;
+	--code-punctuation: #b968fc;
+	--code-string: #ab92fc;
+	--code-tag: #e6bb85;
+	--code-value: #d99145;
+
 	--radius-s: 0px;
 	--radius-m: 0px;
 	--radius-l: 0px;
@@ -10,7 +78,8 @@ body {
 	--slider-thumb-radius: 0px;
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
 	display: none;
 }
 
@@ -21,14 +90,251 @@ svg * {
 	ry: 0;
 }
 
-.menu {
-	padding: var(--size-2-1);
+/*------- TEXT FIXES -------*/
+
+.cm-em,
+.markdown-preview-section em {
+	color: #77f99b;
+	font-style: italic !important;
 }
 
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
+.cm-strong,
+.markdown-preview-section strong {
+	color: #77f99b;
+	font-style: normal !important;
+	font-weight: bold !important;
 }
 
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+.cm-header-1,
+h1 {
+	color: #87ff5f;
+	opacity: 1;
+}
+
+.cm-header-2,
+h2 {
+	color: #87ff5f;
+	opacity: 0.9;
+}
+
+.cm-header-3,
+h3 {
+	color: #87ff5f;
+	opacity: 0.8;
+}
+
+.cm-header-4,
+h4 {
+	color: #87ff5f;
+	opacity: 0.7;
+}
+
+.cm-header-5,
+h5 {
+	color: #9cda7c;
+	opacity: 0.6;
+}
+
+.cm-header-6,
+.markdown-preview-view h6 {
+	color: #9cda7c;
+	opacity: 0.5;
+}
+
+/*------- OBSIDIAN INTERFACE FIXES AND GRAPH FIXES -------*/
+
+/*view action item darker color*/
+.view-action {
+	color: #9cda7c;
+}
+
+.workspace-leaf-resize-handle {
+	background-color: #9f50e1;
+}
+
+.nav-action-button.is-active {
+	background-color: #ab92fc;
+	color: var(--text-muted);
+}
+
+.graph-view.color-line {
+	color: #ab92fc;
+}
+
+.graph-controls {
+	background-color: #000000;
+}
+
+.workspace-leaf.mod-active .view-header-title {
+	color: #9cda7c;
+}
+
+.cm-s-obsidian span.cm-builtin,
+.cm-s-obsidian span.cm-hr {
+	color: var(--background-modifier-border);
+}
+
+/*Border for preview popup window*/
+.popover.hover-popover {
+	border: 2px solid #ce67f0;
+}
+
+/*change color for checked line-through checklist items*/
+.markdown-preview-view ul > li.task-list-item.is-checked {
+	color: var(--text-muted);
+}
+
+/* hide fold icon */
+.CodeMirror-gutter-elt {
+	opacity: 0;
+}
+/* hover over line shows fold icon */
+.CodeMirror-code > div:hover .CodeMirror-gutter-elt {
+	opacity: 1;
+}
+
+.markdown-preview-view .collapse-indicator {
+	opacity: 0.1;
+}
+.markdown-preview-view .collapse-indicator:hover {
+	opacity: 1;
+}
+
+ul ul {
+	position: relative;
+}
+ul ul::before {
+	content: "";
+	border-left: 1px solid;
+	border-image: linear-gradient(
+		to right,
+		#87ff5f,
+		#875faf,
+		rgba(20, 14, 30, 0.1)
+	);
+	border-image-slice: 1;
+	position: absolute;
+	opacity: 0.6;
+}
+ul ul::before {
+	left: -15px;
+	top: 0;
+	bottom: 0;
+}
+
+ol ol {
+	position: relative;
+}
+ol ol::before {
+	content: "";
+	border-left: 1px solid;
+	border-image: linear-gradient(
+		to right,
+		#87ff5f,
+		#875faf,
+		rgba(20, 14, 30, 0.1)
+	);
+	border-image-slice: 1;
+	position: absolute;
+	opacity: 0.6;
+}
+ol ol::before {
+	left: -15px;
+	top: 0;
+	bottom: 0;
+}
+
+li {
+	margin: 10px 0;
+}
+
+.markdown-preview-view hr {
+	border: none;
+	border-top: 1px solid;
+	border-image: linear-gradient(
+		to right,
+		#87ff5f,
+		#875faf,
+		rgba(20, 14, 30, 0.1)
+	);
+	border-image-slice: 1;
+	opacity: 0.5;
+}
+.cm-s-obsidian span.cm-builtin,
+.cm-s-obsidian span.cm-hr {
+	color: #87ff5f;
+}
+
+/*------- BLOCKQUOTES -------*/
+
+.markdown-preview-view blockquote {
+	border: 1px solid;
+	border-image: linear-gradient(
+		to right,
+		#87ff5f,
+		#875faf,
+		rgba(20, 14, 30, 0.1)
+	);
+	border-image-slice: 1;
+	border-left-width: 2px;
+}
+
+.checkbox-container:after {
+	background-color: var(--text-normal);
+}
+
+blockquote:before {
+	font:
+		14px/20px italic Times,
+		serif;
+	content: "“";
+	font-size: 3em;
+	line-height: 0.1em;
+	vertical-align: -0.4em;
+}
+blockquote p {
+	display: inline;
+}
+
+blockquote {
+	margin-inline-start: 0;
+}
+
+.tag {
+	background-color: #483160;
+	border: none;
+	color: var(--text-normal);
+	/*font-size: 18px;*/
+	padding: 1px 9px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0px 0px;
+	cursor: pointer;
+	border-radius: 14px;
+}
+.tag:hover {
+	color: var(--text-normal);
+	background-color: var(--text-faint);
+}
+
+.svelte-pcimu8 {
+	--color-text-today: #87ff5f;
+}
+
+#calendar-container .year {
+	color: #ab92fc;
+}
+
+#calendar-container .month {
+	color: #ab92fc;
+}
+
+#calendar-container .active {
+	color: #87ff5f;
+	background-color: #39274c;
+}
+
+.kanban-plugin__lane {
+	border: var(--interactive-accent);
 }
