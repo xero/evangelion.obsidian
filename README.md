@@ -15,7 +15,7 @@
 ### footnotes
 ![](preview-footnote.png)
 ### frontmatter
-![](preview-props.png)
+![](preview-frontmatter.png)
 ### splits
 ![](preview-splits-imgs.png)
 ### srcview
