@@ -7,8 +7,6 @@ a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 > **note:** i built this theme for the ipad version of the app.
 > it's tested it on desktop and mobile, but is a tablet 1st theme.
 
----
-
 ##  previews
 
 ### markdown
@@ -27,8 +25,12 @@ a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-splits-imgs.png)
 ### srcview
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-src-view.png)
+### settings
+![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-settings.png)
 ### tables
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-tables-colors.png)
+### diff
+![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-diff.png)
 ### ascii art
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-ascii.png)
 ### new tab
@@ -57,7 +59,6 @@ pr's are welcomed! especially for mobile fixes
              | /     |   :      | /     /__/
              |/                 |/   E V A N G E L I O N
 ```
----
 
 # todo
 
