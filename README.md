@@ -4,7 +4,8 @@
 
 a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 
->[!NOTE] **note:** i built this theme for the ipad version of the app. it's tested it on desktop and mobile, but is a tablet 1st theme.
+> **note:** i built this theme for the ipad version of the app.
+> it's tested it on desktop and mobile, but is a tablet 1st theme.
 
 ---
 
@@ -12,8 +13,6 @@ a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 
 ### markdown
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-markdown.png)
-### new tab
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-new-tab.png)
 ### omni search
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-omni.png)
 ### outlines
@@ -32,14 +31,16 @@ a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-tables-colors.png)
 ### ascii art
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-ascii.png)
+### new tab
+![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-new-tab.png)
 
----
+# css snippets
+
+this repo also contains my [snippets library](https://github.com/xero/evangelion.obsidian/tree/snippets) in the `snippets` branch. mostly fonts and ui related tweaks for ascii art
 
 # contributing
 
 pr's are welcomed! especially for mobile fixes
-
----
 
 ```
    N E O N       _            ____
@@ -58,17 +59,14 @@ pr's are welcomed! especially for mobile fixes
 ```
 ---
 
-# license
-
-![kopimi logo](https://gist.githubusercontent.com/xero/cbcd5c38b695004c848b73e5c1c0c779/raw/6b32899b0af238b17383d7a878a69a076139e72d/kopimi-sm.png)
-
-all files and scripts in this repo are released [CC0](https://creativecommons.org/publicdomain/zero/1.0/) / [kopimi](https://kopimi.com)! in the spirit of _freedom of information_, i encourage you to fork, modify, change, share, or do whatever you like with this project! `^c^v`
-
----
-
 # todo
 
 ## submit to the theme gallery
 
 submit a Pull Request to [`obsidianmd/obsidian-releases`](https://github.com/obsidianmd/obsidian-releases#community-theme).
 
+# license
+
+![kopimi logo](https://gist.githubusercontent.com/xero/cbcd5c38b695004c848b73e5c1c0c779/raw/6b32899b0af238b17383d7a878a69a076139e72d/kopimi-sm.png)
+
+all files and scripts in this repo are released [CC0](https://creativecommons.org/publicdomain/zero/1.0/) / [kopimi](https://kopimi.com)! in the spirit of _freedom of information_, i encourage you to fork, modify, change, share, or do whatever you like with this project! `^c^v`
