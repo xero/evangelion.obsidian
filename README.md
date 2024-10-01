@@ -4,7 +4,7 @@
 
 - [ascii.css](https://github.com/xero/evangelion.obsidian/blob/snippets/ascii.css) - code block fixes for text art
 - [topaz.css](https://github.com/xero/evangelion.obsidian/blob/snippets/topaz.css) embedds the classic amiga ascii art font "topaz" into code blocks
-- [hide-meta.css](https://github.com/xero/evangelion.obsidian/blob/snippets/hide-meta.css) - hides front matter in all views
+- [hide-meta.css](https://github.com/xero/evangelion.obsidian/blob/snippets/hide-meta.css) - hides front matter in reading and live preview modes
 - [midnight.css](https://github.com/xero/evangelion.obsidian/blob/snippets/midnight.css) - black background for a note
 - [hide-tbl.css](https://github.com/xero/evangelion.obsidian/blob/snippets/hide-tbl.css) - headers only tables with zero margin (reading view only)
 
@@ -29,22 +29,6 @@ cssclasses:
   - midnight
   - hide-meta
 ---
-```
-
-```
-   N E O N       _            ____
-                : \           |   \    .
- G E N E S i S  |  \ .        |    :   |\            /\
-             .  |   :|\__     |    |   | \          /  \
-.            |\ |   |! \ \    |    |   | |\        /   /
-\"-.______   | \:   ||\ \ \   |    |   | | \      /   /
- \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
-   "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
-      \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
-    ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
-  //_________|  /    |/  |/  \__// /     /  /_/ \/
-             | /     |   :      | /     /__/
-             |/                 |/   E V A N G E L I O N
 ```
 
 # license
