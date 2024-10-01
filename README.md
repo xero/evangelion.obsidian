@@ -10,31 +10,27 @@ a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 ##  previews
 
 ### markdown
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-markdown.png)
-### omni search
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-omni.png)
-### outlines
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-outline.png)
-### code blocks
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-code.png)
-### frontmatter
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-props.png)
-### footnotes
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-footnote.png)
-### splits
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-splits-imgs.png)
-### srcview
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-src-view.png)
-### settings
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-settings.png)
-### tables
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-tables-colors.png)
-### diff
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-diff.png)
-### ascii art
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-ascii.png)
+![](preview-markdown.png)
 ### new tab
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-new-tab.png)
+![](preview-new-tab.png)
+### omni search
+![](preview-omni.png)
+### outlines
+![](preview-outline.png)
+### code blocks
+![](preview-code.png)
+### footnotes
+![](preview-footnote.png)
+### frontmatter
+![](preview-frontmatter.png)
+### splits
+![](preview-splits-imgs.png)
+### srcview
+![](preview-src-view.png)
+### tables
+![](preview-tables-colors.png)
+### ascii art
+![](preview-ascii.png)
 
 # css snippets
 
