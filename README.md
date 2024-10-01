@@ -28,7 +28,7 @@ a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 ### settings
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-settings.png)
 ### tables
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-tables-colors.png)
+![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-tables.png)
 ### diff
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-diff.png)
 ### ascii art
