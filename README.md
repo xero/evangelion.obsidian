@@ -1,77 +1,74 @@
-evangelion theme for [obsidian](https://obsidian.md)
-
-## preview
+# evangelion obsidian
 
 ![screenshot](preview.jpg)
 
-# TODO
+a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 
-## Adding your theme to the Theme Gallery
+>[!NOTE] **note:** i built this theme for the ipad version of the app. it's tested it on desktop and mobile, but is a tablet 1st theme.
 
-### Add a screenshot thumbnail
+---
 
-Inside the repository, include a screenshot thumbnail of your theme. You can name the file anything, for example `screenshot.png`. This image will be used for the small preview in the theme list.
+##  previews
 
-Your screenshot file should be `16:9` aspect ratio.
-The recommended size is 512x288.
+### markdown
+![](preview-markdown.png)
+### new tab
+![](preview-new-tab.png)
+### omni search
+![](preview-omni.png)
+### outlines
+![](preview-outline.png)
+### code blocks
+![](preview-code.png)
+### frontmatter
+![](preview-props.png)
+### footnotes
+![](preview-footnote.png)
+### splits
+![](preview-splits-imgs.png)
+### srcview
+![](preview-src-view.png)
+### tables
+![](preview-tables-colors.png)
+### ascii art
+![](preview-ascii.png)
 
-### Submit your theme for review
+---
 
-To have your theme included in the Theme Gallery, you will need to submit a Pull Request to [`obsidianmd/obsidian-releases`](https://github.com/obsidianmd/obsidian-releases#community-theme).
+# contributing
 
-## Releasing Versions _(Optional)_
+pr's are welcomed! especially for mobile fixes
 
-If your theme is getting more and more complex, you might want to start thinking about how your theme will stay compatible with different versions of Obsidian. Introduced in v0.16 of Obsidian, themes support [Github Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). This means that you can specify which versions of your theme are compatible with which versions of Obsidian.
+---
 
-### Steps for releasing the initial version of your theme (1.0.0)
+```
+   N E O N       _            ____
+                : \           |   \    .
+ G E N E S i S  |  \ .        |    :   |\            /\
+             .  |   :|\__     |    |   | \          /  \
+.            |\ |   |! \ \    |    |   | |\        /   /
+\"-.______   | \:   ||\ \ \   |    |   | | \      /   /
+ \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
+   "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
+      \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
+    ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
+  //_________|  /    |/  |/  \__// /     /  /_/ \/
+             | /     |   :      | /     /__/
+             |/                 |/   E V A N G E L I O N
+```
+---
 
-1. From your theme's repository, click on "Releases".
+# license
 
-<img width="235" alt="Pasted image 20220822145001" src="https://user-images.githubusercontent.com/693981/186000441-287a1a97-65f6-4b5f-ba66-810ceae91cd3.png">
+![kopimi logo](https://gist.githubusercontent.com/xero/cbcd5c38b695004c848b73e5c1c0c779/raw/6b32899b0af238b17383d7a878a69a076139e72d/kopimi-sm.png)
 
-2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
+all files and scripts in this repo are released [CC0](https://creativecommons.org/publicdomain/zero/1.0/) / [kopimi](https://kopimi.com)! in the spirit of _freedom of information_, i encourage you to fork, modify, change, share, or do whatever you like with this project! `^c^v`
 
-<img width="202" alt="Pasted image 20220822145048" src="https://user-images.githubusercontent.com/693981/186000664-6c63ae14-f685-4d39-bfe6-324f95cd9669.png">
+---
 
-3. Fill out the Release information form.
-	- **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
-		<img width="340" alt="Pasted image 20220822145648" src="https://user-images.githubusercontent.com/693981/186000848-bd1c2619-ea09-4e70-a886-40769cda6921.png">
-	- **Release Title**: This can be the version number.
-	- **Description** _Optional_: Anything that changed
-	- **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
+# todo
 
-<img width="946" alt="Pasted image 20220822145356" src="https://user-images.githubusercontent.com/693981/186000772-e689ecea-c3b7-4e9d-9204-7ad62c0123aa.png">
+## submit to the theme gallery
 
-4. Click "Publish Release."
-5. Make sure that `versions.json` is set up correctly. This file is a map.
-  ```json
-  {
-    "1.0.0": "0.16.0"
-  }
-  ```
+submit a Pull Request to [`obsidianmd/obsidian-releases`](https://github.com/obsidianmd/obsidian-releases#community-theme).
 
-  This means that version 1.0.0 of your theme is compatible with version 0.16.0 of Obsidian. For the initial release of your theme, you shouldn't need to make any changes to this file.
-
-### Steps for releasing new versions
-
-Releasing a new version of your theme is the same as releasing the initial version.
-
-1. From your theme's repository, click on "Releases."
-2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
-3. Fill out the Release information form.
-	- **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
-		<img width="333" alt="Pasted image 20220822145812" src="https://user-images.githubusercontent.com/693981/186000912-f494def9-0f67-4662-92bf-bd278082455f.png">
-	- **Release Title**: This can be the version number.
-	- **Description** _Optional_: Anything that changed
-	- **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
-
-4. Click "Publish Release."
-5. Update the `versions.json` file in your repository. For the initial release of your theme, you probably didn't need to make any changes to the `versions.json` file. When you release subsequent versions of your theme; however, it's best practice to include the new version as entry in the versions.json file. So this might look like:
-  ```json
-  {
-		"1.0.0": "0.16.0",
-		"1.0.1": "0.16.0"
-  }
-  ```
-
-  What's important to note here is: the new version is included as the "key" and the "value" is the minimum version of Obsidian that your theme compatible with. So if the new version of your theme is only compatible with an Insider version of Obsidian, it's important to set this value accordingly. This will prevent users on older versions of Obsidian from updating to the newer version of your theme.
