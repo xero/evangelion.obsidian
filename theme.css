@@ -53,7 +53,7 @@ body,
   --text-on-accent: #d4d4d4;
   --text-selection: #9cda7c;
 
-  --code-background: #452f5c;
+  --code-background: #39274d;
   --code-comment: #a1a0ad;
   --code-function: #9cda7c;
   --code-important: #8bd450;
@@ -73,9 +73,10 @@ body,
 
   --table-background: transparent;
   --table-border-color: #483160;
+  --table-border-width: 1;
   --table-header-background: #9f50e1;
   --table-header-border-color: #9f50e1;
-  --table-header-color: #e1d6f8;
+  --table-header-color: #000000;
   --table-text-color: #e1d6f8;
   --table-selection: #9cda7c;
   --table-selection-border-color: #87ff5f;
@@ -690,8 +691,10 @@ cm-hr,
   padding: 0px !important;
 }
 
-.dataview tbody tr:nth-child(even) {
-  background: #39274c;
+.dataview tbody tr {
+  border-bottom: 1px solid #39274c;
+  --table-background: transparent;
+  background: transparent !important;
 }
 
 .dataview tbody td {
@@ -710,15 +713,26 @@ a:visited {
 /* tables */
 thead,
 .table-view-thead {
-  background-color: #9f50e1;
-  color: #e1d6f8;
+  background-color: #9f50e1 !important;
+  color: #000 !important;
   font-weight: bold;
-  text-align: center;
 }
 
 tbody,
 .table-view-tbody {
-  background: #483160;
+  --table-background: #39274d;
+
+  tr,
+  td {
+    --table-background: transparent;
+    background: transparent !important;
+  }
+  tr {
+    border-bottom: 1px solid #9f50e1;
+  }
+  td {
+    border: none !important;
+  }
 }
 
 /* search highlights */
@@ -936,8 +950,8 @@ https://github.com/replete/obsidian-minimal-theme-css-snippets
   background: #67478a !important;
 
   .workspace-tab-header-inner-title {
-		color: #e1d6f8 !important;
-	}
+    color: #e1d6f8 !important;
+  }
 }
 
 .workspace-tab-header:not(.is-active):hover
