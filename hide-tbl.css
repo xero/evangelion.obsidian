@@ -1,0 +1,65 @@
+/* hide-tbl snip
+ * hide table borders with style
+ */
+body.hide-tbl,
+.theme-dark.hide-tbl,
+.theme-light.hide-tbl,
+.markdown-source-view.hide-tbl,
+.markdown-preview-view.hide-tbl,
+.markdown-source-view.hide-tbl .cm-scroller {
+  --table-background: transparent !important;
+  --table-border-color: #222222 !important;
+  --table-header-background: #39274c !important;
+  --table-header-border-color: #201430 !important;
+  --table-header-color: #e1d6f8 !important;
+  --table-text-color: #e1d6f8 !important;
+  --table-selection: #9cda7c !important;
+  --table-selection-border-color: #87ff5f !important;
+  --table-selection-border-width: 1 !important;
+  --table-drag-handle-background: #452f5c !important;
+  --table-drag-handle-color: #e1d6f8 !important;
+  --table-add-button-background: #452f5c !important;
+  --table-add-button-border-width: 0px !important;
+  --table-add-button-border-color: #e1d6f8 !important;
+  --table-border-width: 0px !important;
+  --table-column-alt-background: transparent !important;
+  --table-column-first-border-width: 0px !important;
+  --table-column-last-border-width: 0px !important;
+  --table-row-alt-background: transparent !important;
+  --table-row-last-border-width: 0px !important;
+  --table-header-padding-x: 4px;
+  --table-header-padding-y: 4px;
+}
+.cm-s-obsidian.hide-tbl,
+.markdown-source-view.hide-tbl,
+.markdown-source-view.hide-tbl .cm-scroller,
+.is-live-preview.hide-tbl,
+.markdown-rendered.hide-tbl table {
+  & thead tr > th,
+  & thead tr > td,
+  & tbody tr > td {
+    margin: 0px !important;
+    padding: 0px 13px 0px 0px;
+    background: transparent !important;
+  }
+}
+
+.markdown-rendered.hide-tbl table {
+  height: fit-content;
+}
+thead,
+.table-view-thead {
+  margin-bottom: 4px;
+}
+tbody,
+.table-view-tbody {
+  background: transparent !important;
+
+  tr:nth-child(1),
+  td:nth-child(1) {
+    div {
+      height: 100%;
+			width: 100%;
+    }
+  }
+}

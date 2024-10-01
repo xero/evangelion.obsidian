@@ -1,0 +1,9 @@
+body.midnight,
+.theme-dark.midnight,
+.theme-light.midnight,
+.markdown-source-view.midnight,
+.markdown-preview-view.midnight,
+.markdown-source-view.midnight .cm-scroller {
+  --code-background: #000000;
+	background: #000000;
+}

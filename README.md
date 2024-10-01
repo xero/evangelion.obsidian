@@ -1,46 +1,35 @@
 # evangelion obsidian
 
-![screenshot](preview.png)
+## css snippets
 
-a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
+- [ascii.css](https://github.com/xero/evangelion.obsidian/blob/snippets/ascii.css) - code block fixes for text art
+- [topaz.css](https://github.com/xero/evangelion.obsidian/blob/snippets/topaz.css) embedds the classic amiga ascii art font "topaz" into code blocks
+- [hide-meta.css](https://github.com/xero/evangelion.obsidian/blob/snippets/hide-meta.css) - hides front matter in all views
+- [midnight.css](https://github.com/xero/evangelion.obsidian/blob/snippets/midnight.css) - black background for a note
+- [hide-tbl.css](https://github.com/xero/evangelion.obsidian/blob/snippets/hide-tbl.css) - headers only tables with zero margin (reading view only)
 
-> **note:** i built this theme for the ipad version of the app.
-> it's tested it on desktop and mobile, but is a tablet 1st theme.
+### installing
 
+add these to your `/.obsidian/snippets` folder then enable them in **settings > appearance**
+
+### using
+
+add a front matter property called _"cssclasses"_ and use the name of the snip you want to apply. each work on a per-note basis.
+
+#### front matter example
+```
 ---
-
-##  previews
-
-### markdown
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-markdown.png)
-### omni search
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-omni.png)
-### outlines
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-outline.png)
-### code blocks
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-code.png)
-### frontmatter
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-props.png)
-### footnotes
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-footnote.png)
-### splits
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-splits-imgs.png)
-### srcview
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-src-view.png)
-### tables
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-tables-colors.png)
-### ascii art
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-ascii.png)
-### new tab
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-new-tab.png)
-
-# css snippets
-
-this repo also contains my [snippets library](https://github.com/xero/evangelion.obsidian/tree/snippets) in the `snippets` branch. mostly fonts and ui related tweaks for ascii art
-
-# contributing
-
-pr's are welcomed! especially for mobile fixes
+id: rad text-art
+tags:
+  - ascii
+  - art
+cssclasses:
+  - ascii
+  - topaz
+  - midnight
+  - hide-meta
+---
+```
 
 ```
    N E O N       _            ____
@@ -57,13 +46,6 @@ pr's are welcomed! especially for mobile fixes
              | /     |   :      | /     /__/
              |/                 |/   E V A N G E L I O N
 ```
----
-
-# todo
-
-## submit to the theme gallery
-
-submit a Pull Request to [`obsidianmd/obsidian-releases`](https://github.com/obsidianmd/obsidian-releases#community-theme).
 
 # license
 

@@ -1,0 +1,23 @@
+body.hide-meta,
+.theme-dark.hide-meta,
+.theme-light.hide-meta,
+.markdown-source-view.hide-meta,
+.markdown-preview-view.hide-meta,
+.markdown-source-view.hide-meta .cm-scroller {
+  --metadata-padding: 0 0 0 0;
+
+  .metadata *,
+  .metadata-properties-heading {
+    display: none;
+  }
+  .metadata-container,
+  .metadata-container .metadata-add-button {
+    display: none;
+  }
+  .metadata-container {
+    margin-block-end: 0;
+  }
+  .metadata-property {
+    display: none;
+  }
+}

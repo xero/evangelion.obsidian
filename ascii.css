@@ -1,0 +1,54 @@
+/* ascii snippet
+ * text art fixes for code blocks
+ */
+/* writing view */
+.HyperMD-codeblock.ascii *,
+.HyperMD-codeblock.ascii .HyperMD-codeblock-bg,
+.cm-s-obsidian.ascii pre.HyperMD-codeblock,
+.markdown-source-view.ascii pre,
+.markdown-source-view.ascii code,
+.markdown-source-view.ascii .cm-scroller pre,
+.markdown-source-view.ascii .cm-scroller code,
+.markdown-rendered.ascii pre,
+.markdown-rendered.ascii code,
+.markdown-rendered.ascii pre code,
+.markdown-rendered.ascii code:not(pre code),
+.is-live-preview.ascii div.HyperMD-codeblock-bg,
+.is-live-preview.ascii span.cm-inline-code {
+  --code-normal: #e1d6f8;
+  --code-background: #000000;
+  --indentation-guide-color: #000000;
+  --indentation-guide-color-active: #000000;
+  --code-border-width: 0px;
+  --code-border-color: #000000;
+  --code-border-radius: 0px;
+  overflow: visible !important;
+  line-height: 1em !important;
+  letter-spacing: -1px;
+}
+/* hide indents */
+.ascii .cm-indent {
+  --indentation-guide-width: 0px;
+  --indentation-guide-width-active: 0px;
+  --indentation-guide-editing-indent: 0px;
+  --indentation-guide-reading-indent: 0px;
+  --indentation-guide-source-indent: 0px;
+	min-width: 30px !important;
+	max-width: 30px !important;
+}
+/* reading view */
+.markdown-rendered.ascii pre,
+.markdown-rendered.ascii code,
+.markdown-rendered.ascii pre code,
+.markdown-rendered.ascii code:not(pre code) {
+  --code-normal: #e1d6f8;
+  --code-background: #000000;
+  --indentation-guide-color: #000000;
+  --indentation-guide-color-active: #000000;
+  --code-border-width: 0px;
+  --code-border-color: #000000;
+  --code-border-radius: 0px;
+  letter-spacing: -1px;
+  overflow: visible !important;
+  line-height: 0.95em !important;
+}
