@@ -1,13 +1,7 @@
 # evangelion theme for obsidian
 ##  previews
-###in app preview
+### in-app theme preview
 ![](preview.png)
-### ascii art
-![](preview-ascii.png)
-### code blocks
-![](preview-code.png)
-### footnotes
-![](preview-footnote.png)
 ### markdown
 ![](preview-markdown.png)
 ### new tab
@@ -16,6 +10,10 @@
 ![](preview-omni.png)
 ### outlines
 ![](preview-outline.png)
+### code blocks
+![](preview-code.png)
+### footnotes
+![](preview-footnote.png)
 ### frontmatter
 ![](preview-props.png)
 ### splits
@@ -24,3 +22,5 @@
 ![](preview-src-view.png)
 ### tables
 ![](preview-tables-colors.png)
+### ascii art
+![](preview-ascii.png)
