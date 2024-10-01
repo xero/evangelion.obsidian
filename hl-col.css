@@ -1,0 +1,33 @@
+/* hl-col snip
+ * highlight the first table column
+ */
+tbody,
+.table-view-tbody,
+.cm-s-obsidian.hl-col,
+.markdown-source-view.hl-col,
+.markdown-source-view.hl-col .cm-scroller,
+.is-live-preview.hl-col,
+.markdown-rendered.hl-col {
+  table tbody {
+    height: fit-content;
+
+    td {
+			padding: 8px 4px !important;
+
+      &:nth-child(1) {
+        font-size: 1.5em !important;
+        padding: 0px !important;
+        margin: 0px 0px 15px 0px !important;
+
+        pre,
+        code {
+          font-size: 1.5em !important;
+          width: 100% !important;
+          height: 98% !important;
+          margin: 0px !important;
+          padding: 0px 15px !important;
+        }
+      }
+    }
+  }
+}
