@@ -64,7 +64,7 @@ pr's are welcomed! especially for mobile fixes
 
 ## submit to the theme gallery
 
-submit a Pull Request to [`obsidianmd/obsidian-releases`](https://github.com/obsidianmd/obsidian-releases#community-theme).
+waiting for approval on [pr #4302](https://github.com/obsidianmd/obsidian-releases/pull/4304) to [`obsidian-releases`](https://github.com/obsidianmd/obsidian-releases#community-theme)
 
 # license
 
