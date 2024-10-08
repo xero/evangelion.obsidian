@@ -1,0 +1,12 @@
+/* icrease icon sizing */
+div.nav-files-container .iconize-icon svg {
+	width: 25px !important;
+	height: 25px !important;
+	filter: drop-shadow(2px 2px 0px #101010);
+}
+.tree-item-inner.nav-file-title-content {
+	font-size: 1.1em !important;
+	padding-left: 2px;
+	color: #e1d6f8;
+	filter: drop-shadow(2px 2px 0px #101010);
+}

@@ -1,0 +1,4 @@
+.katakana ol {
+  list-style-type: katakana !important;
+  margin-inline-start: 15px !important;
+}

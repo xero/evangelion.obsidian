@@ -1,5 +1,5 @@
 /* ascii snippet
- * text art fixes for code blocks
+ * text art stylings for code blocks
  */
 /* writing view */
 .HyperMD-codeblock.ascii *,
@@ -25,16 +25,13 @@
   overflow: visible !important;
   line-height: 1em !important;
   letter-spacing: -1px;
-}
-/* hide indents */
-.ascii .cm-indent {
-  --indentation-guide-width: 0px;
-  --indentation-guide-width-active: 0px;
-  --indentation-guide-editing-indent: 0px;
-  --indentation-guide-reading-indent: 0px;
-  --indentation-guide-source-indent: 0px;
-	min-width: 30px !important;
-	max-width: 30px !important;
+  .cm-lineWrapping {
+    white-space: nowrap !important;
+  }
+  /* hide lang button */
+  .code-block-flair {
+    display: none !important;
+  }
 }
 /* reading view */
 .markdown-rendered.ascii pre,
@@ -51,4 +48,19 @@
   letter-spacing: -1px;
   overflow: visible !important;
   line-height: 0.95em !important;
+
+  /* hide copy button */
+  *[class*="button"] {
+    display: none !important;
+  }
+}
+/* hide indents */
+.ascii .cm-indent {
+  --indentation-guide-width: 0px;
+  --indentation-guide-width-active: 0px;
+  --indentation-guide-editing-indent: 0px;
+  --indentation-guide-reading-indent: 0px;
+  --indentation-guide-source-indent: 0px;
+  min-width: 30px !important;
+  max-width: 30px !important;
 }
