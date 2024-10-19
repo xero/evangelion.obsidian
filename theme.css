@@ -166,6 +166,7 @@ body,
 
 /* hide in reading mode */
 .markdown-rendered {
+
 	pre.frontmatter,
 	.mod-header,
 	.obsidian-metatable {
@@ -198,12 +199,10 @@ pre {
 blockquote:before,
 .markdown-preview-view blockquote {
 	border: 2px solid;
-	border-image: linear-gradient(
-		to right bottom,
-		#87ff5f 0,
-		#875faf 45%,
-		rgba(20, 14, 30, 0) 85%
-	);
+	border-image: linear-gradient(to right bottom,
+			#87ff5f 0,
+			#875faf 45%,
+			rgba(20, 14, 30, 0) 85%);
 	border-image-slice: 1;
 	padding: 10px;
 }
@@ -461,43 +460,60 @@ strong,
 /* headers */
 h1,
 .cm-header-1,
-.markdown-preview-view h1 {
+.markdown-preview-view h1,
+h2,
+.cm-header-2,
+.markdown-preview-view h2,
+h3,
+.cm-header-3,
+.markdown-preview-view h3,
+h4,
+.cm-header-4,
+.markdown-preview-view h4,
+h5,
+.cm-header-5,
+.markdown-preview-view h5,
+h6,
+.cm-header-6,
+.markdown-preview-view h6 {
 	color: #87ff5f;
+	margin: 0.5em 0 0 0 !important;
+	padding: 0 !important;
+}
+
+h1,
+.cm-header-1,
+.markdown-preview-view h1 {
 	opacity: 1;
 }
 
 h2,
 .cm-header-2,
 .markdown-preview-view h2 {
-	color: #87ff5f;
 	opacity: 0.9;
 }
 
 h3,
 .cm-header-3,
 .markdown-preview-view h3 {
-	color: #87ff5f;
 	opacity: 0.8;
 }
 
 h4,
 .cm-header-4,
 .markdown-preview-view h4 {
-	color: #87ff5f;
 	opacity: 0.7;
 }
 
 h5,
 .cm-header-5,
 .markdown-preview-view h5 {
-	color: #87ff5f;
 	opacity: 0.6;
 }
 
 h6,
 .cm-header-6,
 .markdown-preview-view h6 {
-	color: #87ff5f;
 	opacity: 0.5;
 }
 
@@ -508,7 +524,7 @@ h6,
 
 .git-tools,
 .workspace-drawer-vault-actions,
-.view-content.node-insert-event > div,
+.view-content.node-insert-event>div,
 .view-content.node-insert-event .tree-item,
 .workspace-leaf-content[data-type="outline"] .view-content,
 .nav-buttons-container {
@@ -538,7 +554,7 @@ h6,
 }
 
 /* change color for checked line-through checklist items */
-.markdown-preview-view ul > li.task-list-item.is-checked {
+.markdown-preview-view ul>li.task-list-item.is-checked {
 	color: #d4d4d4;
 }
 
@@ -551,20 +567,36 @@ h6,
 }
 
 /* {un,}ordered lists */
-:is(.cm-formatting-list-ul, .markdown-rendered ul > li) > .list-bullet::after {
+:is(.cm-formatting-list-ul, .markdown-rendered ul > li)>.list-bullet::after {
 	border: none;
 	content: none;
 	outline: none;
 }
 
+ul,
+.cm-formatting-list-ul,
+.markdown-rendered ul {
+	margin: 0 0 0 -0.4em;
+	padding: 0 0 0.4em 0;
+
+	& ul {
+		padding: 0 0 0 1em;
+	}
+}
+
+ul.has-list-bullet li {
+	margin-left: 24px;
+}
+
 .list-bullet::before,
-ul:not(li > *) > li > .list-bullet::before,
-ul:not(li > *) > li > ul > li > .list-bullet::before,
-ul:not(li > *) > li > ul > li > ul > li > .list-bullet::before,
+ul:not(li > *)>li>.list-bullet::before,
+ul:not(li > *)>li>ul>li>.list-bullet::before,
+ul:not(li > *)>li>ul>li>ul>li>.list-bullet::before,
 ol li ul li .list-bullet::before {
 	content: "◈";
 	color: #ce67f0;
-	margin-left: -0.2em;
+	margin-left: -1em;
+	margin-bottom: -0.2em;
 }
 
 .HyperMD-list-line-1,
@@ -575,11 +607,13 @@ ol li ul li .list-bullet::before {
 .HyperMD-list-line-6,
 .HyperMD-list-line-7,
 .HyperMD-list-line-8 {
+	margin: 0;
+	padding: 0;
 	.list-bullet::before {
 		content: "◈";
 		color: #ce67f0;
-		margin-left: 0 !important;
-		padding-right: 0 !important;
+		margin-left: -0.1em;
+		padding-right: 0;
 	}
 }
 
@@ -590,12 +624,10 @@ ol {
 ol::before {
 	content: "";
 	border-left: 2px solid;
-	border-image: linear-gradient(
-		to bottom,
-		#87ff5f,
-		#875faf,
-		rgba(20, 14, 30, 0.1)
-	);
+	border-image: linear-gradient(to bottom,
+			#87ff5f,
+			#875faf,
+			rgba(20, 14, 30, 0.1));
 	border-image-slice: 1;
 	position: absolute;
 	top: 0;
@@ -617,12 +649,10 @@ cm-hr,
 .markdown-preview-view hr {
 	border: none;
 	border-top: 2px solid;
-	border-image: linear-gradient(
-		to right,
-		#87ff5f,
-		#875faf,
-		rgba(20, 14, 30, 0.1)
-	);
+	border-image: linear-gradient(to right,
+			#87ff5f,
+			#875faf,
+			rgba(20, 14, 30, 0.1));
 	border-image-slice: 1;
 	margin-bottom: 2em;
 	margin-top: 2em;
@@ -690,7 +720,27 @@ thead,
 	color: #000 !important;
 	font-weight: bold;
 }
+.markdown-source-view,
+.markdown-source-view .cm-scroller {
+	thead,
+	.table-view-thead {
+		color: #fff !important;
+		font-weight: bold;
+	}
+}
 
+thead,
+.table-view-thead {
+	background-color: #9f50e1 !important;
+	color: #000 !important;
+	font-weight: bold;
+}
+thead,
+.table-view-thead {
+	background-color: #9f50e1 !important;
+	color: #000 !important;
+	font-weight: bold;
+}
 tbody,
 .table-view-tbody {
 	--table-background: #39274d;
@@ -717,7 +767,7 @@ tbody,
 	color: #201430 !important;
 }
 
-.markdown-rendered .search-highlight > div {
+.markdown-rendered .search-highlight>div {
 	position: absolute;
 	pointer-events: none;
 	box-shadow: 0 0 0px 2px #87ff5f;
@@ -726,7 +776,7 @@ tbody,
 	z-index: 999;
 }
 
-.markdown-rendered .search-highlight > div.is-active {
+.markdown-rendered .search-highlight>div.is-active {
 	box-shadow: 0 0 0px 3px #87ff5f;
 	opacity: 1;
 	z-index: 999;
@@ -771,7 +821,7 @@ tbody,
 }
 
 .omnisearch-result__title,
-.omnisearch-result__title > span {
+.omnisearch-result__title>span {
 	color: #9cda7c;
 }
 
@@ -833,23 +883,27 @@ img alignment hax
 ![[image.png | center | 256]]
 ![Photo | floatleft | 256](image.png)
 */
+.right,
 img[alt*="right"] {
 	display: block;
 	margin-left: auto;
 	margin-right: 0;
 }
 
+.center,
 img[alt*="center"] {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+.floatleft,
 img[alt*="floatleft"] {
 	float: left;
 	clear: left;
 }
 
+.floatRight,
 img[alt*="floatright"] {
 	float: right;
 	clear: right;
@@ -900,17 +954,11 @@ https://github.com/replete/obsidian-minimal-theme-css-snippets
 }
 
 /* less prominent pinned icon */
-.workspace
-	.mod-root
-	.workspace-tab-header.is-active
-	.workspace-tab-header-status-icon {
+.workspace .mod-root .workspace-tab-header.is-active .workspace-tab-header-status-icon {
 	opacity: 0.6 !important;
 }
 
-.workspace
-	.mod-root
-	.workspace-tab-header:not(.is-active)
-	.workspace-tab-header-inner-close-button {
+.workspace .mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
 	position: absolute;
 	right: 6px;
 	margin-top: 0px;
@@ -929,16 +977,12 @@ https://github.com/replete/obsidian-minimal-theme-css-snippets
 	}
 }
 
-.workspace-tab-header:not(.is-active):hover
-	.workspace-tab-header-inner-close-button {
+.workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button {
 	background: #b968fc;
 }
 
 /* fade graphic to make hover close button look less harsh */
-.workspace
-	.mod-root
-	.workspace-tab-header:not(.is-active):hover
-	.workspace-tab-header-inner-close-button::before {
+.workspace .mod-root .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -974,8 +1018,8 @@ is-tablet .workspace-split.mod-horizontal.mod-sidedock.mod-left-split {
 }
 
 .workspace-drawer-vault-name,
-.is-tablet .workspace-drawer-header > * *,
-.is-tablet .workspace-drawer.is-pinned .workspace-drawer-header > * * {
+.is-tablet .workspace-drawer-header>* *,
+.is-tablet .workspace-drawer.is-pinned .workspace-drawer-header>* * {
 	color: #d99145 !important;
 }
 
@@ -986,8 +1030,8 @@ is-tablet .workspace-split.mod-horizontal.mod-sidedock.mod-left-split {
 }
 
 .is-tablet .workspace-drawer {
-	max-width: 200px !important;
-	max-width: 300px !important;
+  max-width: 200px !important;
+  max-width: 300px !important;
 }
 
 .workspace-drawer:not(.is-pinned) {
@@ -1006,12 +1050,8 @@ is-tablet .workspace-split.mod-horizontal.mod-sidedock.mod-left-split {
 	}
 }
 
-.is-focused.mod-active
-	.workspace-tab-header.is-active
-	.workspace-tab-header-inner-icon,
-.is-focused.mod-active
-	.workspace-tab-header.is-active
-	.workspace-tab-header-inner-title {
+.is-focused.mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.is-focused.mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
 	color: #e1d6f8 !important;
 }
 
@@ -1052,7 +1092,7 @@ select.dropdown {
 
 .git-tools,
 .workspace-drawer-vault-actions,
-.view-content.node-insert-event > div,
+.view-content.node-insert-event>div,
 .nav-buttons-container {
 	background: #452f5c !important;
 
@@ -1068,14 +1108,10 @@ select.dropdown {
 }
 
 .tree-item-children {
-	padding-inline-start: var(
-		--nav-item-children-padding-start,
-		var(--nav-item-children-padding-left)
-	);
-	margin-inline-start: var(
-		--nav-item-children-margin-start,
-		var(--nav-item-children-margin-left)
-	);
+	padding-inline-start: var(--nav-item-children-padding-start,
+			var(--nav-item-children-padding-left));
+	margin-inline-start: var(--nav-item-children-margin-start,
+			var(--nav-item-children-margin-left));
 	border-inline-start: 2px solid #28163b;
 }
 
@@ -1130,5 +1166,15 @@ select.dropdown {
 
 	.beautitab-recentlyedited-file-name {
 		color: #a4d2ec;
+	}
+}
+/* custom header icons  */
+header {
+	float: right;
+	clear: none;
+
+	.cm-iconize-icon svg {
+		width: 50px !important;
+		height: 50px !important;
 	}
 }
