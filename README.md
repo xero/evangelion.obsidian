@@ -8,9 +8,11 @@
 - [hide-tbl.css](https://github.com/xero/evangelion.obsidian/blob/snippets/hide-tbl.css) - headers only tables with zero margin (reading view only)
 - [hl-col.css](https://github.com/xero/evangelion.obsidian/blob/snippets/hl-col.css) - highlights the first table column
 - [hl-reading-view.css](https://github.com/xero/evangelion.obsidian/blob/snippets/hl-reading-view.css) - custom theme for the "reading view enhanced" plugin _(global)_
-- [icons.css](https://github.com/xero/evangelion.obsidian/blob/snippets/icons.css) - make the iconize file tree images bigger _(global)_
-- [katakana.css](https://github.com/xero/evangelion.obsidian/blob/snippets/katakana.css) - japanese styling for ordered lists _(global)_
+- [katakana.css](https://github.com/xero/evangelion.obsidian/blob/snippets/katakana.css) - japanese styling for ordered lists
 - [midnight.css](https://github.com/xero/evangelion.obsidian/blob/snippets/midnight.css) - black background for a note
+- [icons.css](https://github.com/xero/evangelion.obsidian/blob/snippets/icons.css) - make the iconize file tree images bigger _(global)_
+- [big-icons.css](https://github.com/xero/evangelion.obsidian/blob/snippets/big-icons.css) - enlarges all svg icons in the current document
+- [icon-sheet.css](https://github.com/xero/evangelion.obsidian/blob/snippets/icon-sheet.css) - special table and svg styles used for testing my custom icons
 
 ### installing
 

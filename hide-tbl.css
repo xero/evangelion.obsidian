@@ -39,20 +39,21 @@ body.hide-tbl,
   & thead tr > td,
   & tbody tr > td {
     margin: 0px !important;
-    padding: 0px 13px 0px 0px;
+    padding: 1px 13px 1px 1px;
     background: transparent !important;
+    vertical-align: middle;
   }
 }
 
 .markdown-rendered.hide-tbl table {
   height: fit-content;
 }
-thead,
-.table-view-thead {
+thead.hide-tbl,
+.table-view-thead.hide-tbl {
   margin-bottom: 4px;
 }
-tbody,
-.table-view-tbody {
+tbody.hide-tbl,
+.table-view-tbody.hide-tbl {
   background: transparent !important;
 
   tr:nth-child(1),
@@ -64,14 +65,15 @@ tbody,
   }
 }
 
-tbody,
-.table-view-tbody,
-.cm-s-obsidian.hl-col,
-.markdown-source-view.hl-col,
-.markdown-source-view.hl-col .cm-scroller,
-.is-live-preview.hl-col,
-.markdown-rendered.hl-col {
-  table tbody td {
-    border-bottom: 1px solid #30213f !important;
+tbody.hide-tbl,
+.table-view-tbody.hide-tbl,
+.cm-s-obsidian.hide-tbl,
+.markdown-source-view.hide-tbl,
+.markdown-source-view.hide-tbl .cm-scroller,
+.is-live-preview.hide-tbl,
+.markdown-rendered.hide-tbl {
+  tr,
+  td {
+    border: none !important;
   }
 }

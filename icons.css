@@ -1,12 +1,44 @@
-/* icrease icon sizing */
-div.nav-files-container .iconize-icon svg {
-	width: 25px !important;
-	height: 25px !important;
-	filter: drop-shadow(2px 2px 0px #101010);
+/* increase icon sizing */
+.nav-files-container {
+  .nav-folder-title,
+  .nav-file-title {
+    padding-bottom: 2px;
+  }
+  .iconize-icon svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  /* font fixes */
+  .tree-item-inner.nav-folder-title-content,
+  .tree-item-inner.nav-file-title-content {
+    font-size: 1.1em !important;
+    padding-left: 2px;
+  }
+  .tree-item-inner.nav-file-title-content {
+    color: #9cda7c;
+  }
+  .tree-item-inner.nav-folder-title-content {
+    color: #d99145;
+  }
 }
-.tree-item-inner.nav-file-title-content {
-	font-size: 1.1em !important;
-	padding-left: 2px;
-	color: #e1d6f8;
-	filter: drop-shadow(2px 2px 0px #101010);
+main[data-type="git-view"] {
+  .tree-item-inner.nav-folder-title-content,
+  .tree-item-inner.nav-file-title-content {
+    font-size: 1em !important;
+    padding-left: 0px;
+  }
+  .tree-item-inner.nav-file-title-content {
+    color: #e1d6f8;
+  }
+  .tree-item-inner.nav-folder-title-content {
+    color: #d99145;
+  }
+}
+.markdown-rendered,
+.is-live-preview,
+.markdown-source-view {
+  .cm-iconize-icon svg {
+    width: 30px;
+    height: 30px;
+  }
 }

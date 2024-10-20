@@ -1,0 +1,49 @@
+/* icon-sheet snip
+ * highlight icons in the table columns
+ */
+.cm-s-obsidian.icon-sheet,
+.markdown-source-view.icon-sheet,
+.markdown-source-view.icon-sheet .cm-scroller,
+.is-live-preview.icon-sheet,
+.markdown-rendered.icon-sheet {
+	table thead {
+		text-align: center;
+	}
+  table tbody {
+    height: fit-content;
+
+    td {
+      padding: 4px 8px;
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        svg {
+          &:nth-child(1),
+          &:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            &::after {
+              margin-bottom: 8px !important;
+            }
+          }
+        }
+      }
+      &:nth-child(1),
+      &:nth-child(2) {
+        background: #402c56 !important;
+      }
+      &:nth-child(2),
+      &:nth-child(4) {
+				padding-top: 25px !important;
+			}
+      &:nth-child(5) {
+				padding-top: 33px !important;
+			}
+      &:nth-child(1),
+      &:nth-child(3),
+      &:nth-child(5) {
+				padding-left: 20px !important;
+			}
+    }
+  }
+}

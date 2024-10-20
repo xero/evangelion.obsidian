@@ -3,13 +3,13 @@
  * https://github.com/Galacsh/obsidian-reading-view-enhancer
  */
 .rve-selected-block::before {
-  content: " ❯❯" !important;
+  content: "❯❯	" !important;
 	font-size: 1.15em;
 	letter-spacing: -4px;
 	line-height: 0.97em;
 	overflow: visible;
   color: #d99145;
-  margin-left: -60px !important;
+  margin-left: -45px !important;
   position: absolute;
 	padding: 0px !important;
   z-index: -1;

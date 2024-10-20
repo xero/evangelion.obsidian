@@ -1,0 +1,8 @@
+.markdown-rendered.big-icons,
+.is-live-preview.big-icons,
+.markdown-source-view.big-icons {
+  .cm-iconize-icon svg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
