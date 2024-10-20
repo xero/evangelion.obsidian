@@ -123,8 +123,8 @@ body,
 		textarea,
 		select,
 		select.dropdown {
-			border: none !important;
 			background: #22172e;
+			border: none !important; /* these !imps are required */
 			background-color: #22172e !important;
 			color: #e1d6f8 !important;
 		}
@@ -161,16 +161,6 @@ body,
 
 	.metadata-property-key-input {
 		color: #e6bb85;
-	}
-}
-
-/* hide in reading mode */
-.markdown-rendered {
-
-	pre.frontmatter,
-	.mod-header,
-	.obsidian-metatable {
-		display: none;
 	}
 }
 
@@ -228,8 +218,8 @@ blockquote {
 		mix-blend-mode: normal;
 
 		a svg {
-			stroke: #000 !important;
-			fill: #000 !important;
+			stroke: #000;
+			fill: #000;
 			padding-right: 3px;
 		}
 
@@ -237,18 +227,18 @@ blockquote {
 		strong,
 		.cm-em,
 		.cm-strong {
-			color: #201430 !important;
+			color: #201430;
 		}
 
 		* {
-			margin: 0px !important;
+			margin: 0px !important; /* required */
 		}
 
 		.cm-hmd-internal-link,
 		.internal-link,
 		.cm-url,
 		.external-link {
-			color: #201430 !important;
+			color: #201430 !important; /* required */
 			text-decoration-thickness: 1px;
 			text-decoration: underline;
 			text-underline-offset: 1.5px;
@@ -330,7 +320,7 @@ blockquote {
 		sup[data-footnote-id] {
 			color: #ce67f0;
 			padding-left: 2px;
-			filter: none !important;
+			filter: none !important; /* required */
 		}
 
 		.cm-url,
@@ -567,25 +557,37 @@ h6,
 }
 
 /* {un,}ordered lists */
+/* hide old markers */
 :is(.cm-formatting-list-ul, .markdown-rendered ul > li)>.list-bullet::after {
 	border: none;
 	content: none;
 	outline: none;
 }
 
+.HyperMD-list-line.HyperMD-list-line-1.cm-line {
+	margin-left: -0.4em;
+}
+
 ul,
 .cm-formatting-list-ul,
 .markdown-rendered ul {
-	margin: 0 0 0 -0.4em;
+	margin: 0;
 	padding: 0 0 0.4em 0;
 
-	& ul {
+	ul,
+	.cm-formatting-list-ul,
+	.markdown-rendered ul {
 		padding: 0 0 0 1em;
+
+		&::before {
+			background: #101010;
+		}
 	}
 }
 
 ul.has-list-bullet li {
 	margin-left: 24px;
+	padding-top: 0.175em;
 }
 
 .list-bullet::before,
@@ -595,8 +597,8 @@ ul:not(li > *)>li>ul>li>ul>li>.list-bullet::before,
 ol li ul li .list-bullet::before {
 	content: "◈";
 	color: #ce67f0;
-	margin-left: -1em;
-	margin-bottom: -0.2em;
+	margin-left: -0.45em;
+	padding-top: 0.05em;
 }
 
 .HyperMD-list-line-1,
@@ -720,6 +722,12 @@ thead,
 	color: #000 !important;
 	font-weight: bold;
 }
+
+.HyperMD-table-row-0.cm-line {
+	color: #d99145;
+}
+
+
 .markdown-source-view,
 .markdown-source-view .cm-scroller {
 	thead,
@@ -914,7 +922,7 @@ modified from commpact tabs
 https://github.com/replete/obsidian-minimal-theme-css-snippets
 */
 .workspace .mod-root .workspace-tab-header-container {
-	/*border-bottom:0;*/
+	padding-left: 0px;
 	background: #483160;
 }
 
