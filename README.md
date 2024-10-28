@@ -35,13 +35,27 @@ a ui theme and colorscheme for [obsidian](https://obsidian.md) inspired by neon 
 ### new tab
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-new-tab.png)
 
+## supported plugins
+
+this theme explicitly restyles the following plugins:
+
+- [obsidian-shiki-plugin](https://github.com/mProjectsCode/obsidian-shiki-plugin) _(alias: shiki)_
+- [obsidian-iconize](https://github.com/FlorianWoelki/obsidian-iconize) _(alias: icon folder)_
+- [obsidian-commander](https://github.com/phibr0/obsidian-commander) _(alias: cmdr)_
+- [obsidian-beautitab](https://github.com/andrewmcgivery/obsidian-beautitab)
+- [obsidian-git](https://github.com/Vinzent03/obsidian-git)
+- [obsidian-omnisearch](https://github.com/scambier/obsidian-omnisearch)
+- [obsidian-dataview](https://github.com/blacksmithgu/obsidian-dataview)
+- [obsidian-trash-explorer](https://github.com/proog/obsidian-trash-explorer)
+- [obsidian-reading-view-enhancer](https://github.com/Galacsh/obsidian-reading-view-enhancer/)
+
 ## svg icons
 
-the icons used in these screenshots are [available here](https://github.com/xero/svg-icons)
+the icons used in these screenshots are [available here](https://github.com/xero/svg-icons).
 
 # css snippets
 
-this repo also contains my [snippets library](https://github.com/xero/evangelion.obsidian/tree/snippets) in the `snippets` branch. mostly fonts and ui related tweaks for ascii art
+this repo also contains my [snippets library](https://github.com/xero/evangelion.obsidian/tree/snippets) in the `snippets` branch. many of these elements were a personal choice, so i removed them from the main theme. featuring: tablet sizing fixes, japanese stylings, icon sizings, hiding elements, amiga fonts, ui related tweaks for ascii art, and more
 
 # contributing
 
