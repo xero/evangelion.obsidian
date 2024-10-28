@@ -22,7 +22,9 @@ a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 ### footnotes
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-footnote.png)
 ### splits
-![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-splits-imgs.png)
+![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-splits.png)
+### stacked tabs
+![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-stacked-tabs.png)
 ### srcview
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-src-view.png)
 ### settings
