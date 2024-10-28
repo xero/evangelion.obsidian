@@ -2,10 +2,7 @@
 
 ![screenshot](preview.png)
 
-a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
-
-> **note:** i built this theme for the ipad version of the app.
-> it's tested it on desktop and mobile, but is a tablet 1st theme.
+a ui theme and colorscheme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 
 ##  previews
 
@@ -38,13 +35,17 @@ a theme for [obsidian](https://obsidian.md) inspired by neon genesis evangelion.
 ### new tab
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-new-tab.png)
 
+## svg icons
+
+the icons used in these screenshots are [available here](https://github.com/xero/svg-icons)
+
 # css snippets
 
 this repo also contains my [snippets library](https://github.com/xero/evangelion.obsidian/tree/snippets) in the `snippets` branch. mostly fonts and ui related tweaks for ascii art
 
 # contributing
 
-pr's are welcomed! especially for mobile fixes
+pr's are welcomed!
 
 ```
    N E O N       _            ____

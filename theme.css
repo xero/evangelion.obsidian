@@ -119,7 +119,6 @@ body,
 /* to widen the screen, you must disable
  * "readable lines" in settings > editor */
 body:not(.is-mobile) {
-
 	.metadata-container,
 	.cm-contentContainer {
 		margin: 0 auto;
@@ -259,6 +258,10 @@ pre,
 	border-bottom: 4px solid #151515 !important;
 }
 
+.cm-preview-code-block:hover {
+	box-shadow: unset !important;
+}
+
 .copy-code-button {
 	text-indent: -9999px;
 	line-height: 0;
@@ -289,18 +292,90 @@ pre,
 	border-bottom: 4px solid #151515 !important;
 }
 
+.expressive-code {
+	&:hover {
+		.copy button {
+			background-color: transparent !important;
+		}
+	}
+
+	.copy button {
+		transform: scale(0.9) !important;
+		margin-bottom: 8px;
+		margin-right: -5px !important;
+		&::after {
+			background-color: #00ff00 !important;
+		}
+	}
+
+	.ec-line.ins {
+		background: linear-gradient(
+			90deg,
+			rgba(50, 55, 32, 1) 60%,
+			rgba(48, 33, 63, 1) 100%
+		) !important;
+
+		.code {
+			border-color: #9cda7c !important;
+			&::before {
+				color: #9cda7c !important;
+			}
+		}
+	}
+
+	.ec-line.mark {
+		background: #2d1f38;
+		background: linear-gradient(
+			90deg,
+			rgba(72, 49, 96, 1) 60%,
+			rgba(48, 33, 63, 1) 100%
+		) !important;
+	}
+
+	.ec-line.mark .code {
+		border-color: #a1a0ad !important;
+	}
+
+	.ec-line.mark:not(:has(.gutter)) .code {
+		border-color: #875faf !important;
+	}
+
+	.ec-line.del,
+	.ec-line.ins,
+	.ec-line.mark {
+		.gutter {
+			color: #e1d6f8 !important;
+		}
+	}
+
+	.ec-line .gutter {
+		color: #a1a0ad !important;
+	}
+
+	.ec-line.del {
+		background: linear-gradient(
+			90deg,
+			rgba(69, 35, 47, 1) 60%,
+			rgba(48, 33, 63, 1) 100%
+		) !important;
+
+		.code {
+			border-color: #ae1018 !important;
+			&::before {
+				color: #ae1018 !important;
+			}
+		}
+	}
+}
+
 .frame {
 	& .header {
 		background: none !important;
 		display: block !important;
-		margin-bottom: 5px;
 
+		&::after,
 		&::before {
 			display: none !important;
-		}
-
-		&::after {
-			border: 0 !important;
 		}
 
 		.title:empty {
@@ -308,9 +383,11 @@ pre,
 		}
 
 		.title {
-			color: #ab92fc !important;
-			background: #281b36;
+			background: #483160 !important;
 			padding: 8px !important;
+			border-top: 2px solid #875faf;
+			box-sizing: border-box;
+			border-bottom: 2px solid #151515 !important;
 
 			&::after {
 				border: none !important;
@@ -319,26 +396,11 @@ pre,
 	}
 }
 
-.frame.is-terminal .header {
-	margin-bottom: -2px !important;
-}
-
-.expressive-code {
-	.copy button {
-		transform: scale(0.6) !important;
-		margin-bottom: 8px;
-		margin-right: -5px !important;
-	}
-}
-
-.expressive-code:hover {
-	.copy button {
-		background-color: transparent !important;
-	}
-}
-
-.expressive-code .copy button::after {
-	background-color: #00ff00 !important;
+.frame.has-title:not(.is-terminal) .title {
+	border-top: 2px solid #875faf !important;
+	margin-bottom: -6px !important;
+	display: inline-block;
+	padding: 6px !important;
 }
 
 /* syntax highlighting */
@@ -421,10 +483,12 @@ pre,
 blockquote:before,
 .markdown-preview-view blockquote {
 	border: 2px solid;
-	border-image: linear-gradient(to right bottom,
-			#87ff5f 0,
-			#875faf 45%,
-			rgba(20, 14, 30, 0) 85%);
+	border-image: linear-gradient(
+		to right bottom,
+		#87ff5f 0,
+		#875faf 45%,
+		rgba(20, 14, 30, 0) 85%
+	);
 	border-image-slice: 1;
 	padding: 10px;
 	margin: 1em 0;
@@ -697,42 +761,6 @@ h6,
 	padding: 0;
 }
 
-h1,
-.cm-header-1,
-.markdown-preview-view h1 {
-	opacity: 1;
-}
-
-h2,
-.cm-header-2,
-.markdown-preview-view h2 {
-	opacity: 0.9;
-}
-
-h3,
-.cm-header-3,
-.markdown-preview-view h3 {
-	opacity: 0.8;
-}
-
-h4,
-.cm-header-4,
-.markdown-preview-view h4 {
-	opacity: 0.7;
-}
-
-h5,
-.cm-header-5,
-.markdown-preview-view h5 {
-	opacity: 0.6;
-}
-
-h6,
-.cm-header-6,
-.markdown-preview-view h6 {
-	opacity: 0.5;
-}
-
 /* view action item darker color */
 .view-action {
 	color: #9cda7c;
@@ -740,7 +768,7 @@ h6,
 
 .git-tools,
 .workspace-drawer-vault-actions,
-.view-content.node-insert-event>div,
+.view-content.node-insert-event > div,
 .view-content.node-insert-event .tree-item,
 .workspace-leaf-content[data-type="outline"] .view-content,
 .nav-buttons-container {
@@ -770,7 +798,7 @@ h6,
 }
 
 /* strikethrough and desat */
-.markdown-preview-view ul>li.task-list-item.is-checked {
+.markdown-preview-view ul > li.task-list-item.is-checked {
 	text-decoration: none;
 	color: #a1a0ad;
 }
@@ -813,7 +841,7 @@ input[type="checkbox"]:checked::after {
 
 /* {un,}ordered lists */
 /* hide old markers */
-:is(.cm-formatting-list-ul, .markdown-rendered ul > li)>.list-bullet::after {
+:is(.cm-formatting-list-ul, .markdown-rendered ul > li) > .list-bullet::after {
 	border: none;
 	content: none;
 	outline: none;
@@ -846,9 +874,9 @@ ul.has-list-bullet li {
 }
 
 .list-bullet::before,
-ul:not(li > *)>li>.list-bullet::before,
-ul:not(li > *)>li>ul>li>.list-bullet::before,
-ul:not(li > *)>li>ul>li>ul>li>.list-bullet::before,
+ul:not(li > *) > li > .list-bullet::before,
+ul:not(li > *) > li > ul > li > .list-bullet::before,
+ul:not(li > *) > li > ul > li > ul > li > .list-bullet::before,
 ol li ul li .list-bullet::before {
 	content: "◈";
 	color: #ce67f0;
@@ -882,10 +910,12 @@ ol {
 ol::before {
 	content: "";
 	border-left: 2px solid;
-	border-image: linear-gradient(to bottom,
-			#87ff5f,
-			#875faf,
-			rgba(20, 14, 30, 0.1));
+	border-image: linear-gradient(
+		to bottom,
+		#87ff5f,
+		#875faf,
+		rgba(20, 14, 30, 0.1)
+	);
 	border-image-slice: 1;
 	position: absolute;
 	top: 0;
@@ -907,10 +937,12 @@ cm-hr,
 .markdown-preview-view hr {
 	border: none;
 	border-top: 2px solid;
-	border-image: linear-gradient(to right,
-			#87ff5f,
-			#875faf,
-			rgba(20, 14, 30, 0.1));
+	border-image: linear-gradient(
+		to right,
+		#87ff5f,
+		#875faf,
+		rgba(20, 14, 30, 0.1)
+	);
 	border-image-slice: 1;
 	margin-bottom: 2em;
 	margin-top: 2em;
@@ -931,18 +963,19 @@ hr.workspace-leaf-resize-handle {
 }
 
 /* data view */
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview h4,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview>h4,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs h4,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs>h1,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs>h2,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs>h3,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs>h4,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs>p,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-container>.contains-task-list,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-error,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.list-view-ul,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.result-group {
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .block-language-dataview h4,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .block-language-dataview > h4,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .block-language-dataviewjs h4,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .block-language-dataviewjs > h1,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .block-language-dataviewjs > h2,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .block-language-dataviewjs > h3,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .block-language-dataviewjs > h4,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .block-language-dataviewjs > p,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .dataview.dataview-container > .contains-task-list,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .dataview.dataview-error,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .dataview.list-view-ul,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not( .table-max):not(.table-wide) .dataview.result-group {
+	/* width fix */
 	max-width: 100%;
 }
 
@@ -986,7 +1019,6 @@ a:visited {
 .markdown-source-view .cm-scroller,
 .is-live-preview,
 .markdown-rendered {
-
 	.table-view,
 	table {
 		width: 100% !important;
@@ -1045,7 +1077,6 @@ a:visited {
 
 .markdown-source-view,
 .markdown-source-view .cm-scroller {
-
 	thead,
 	.table-view-thead {
 		color: #fff !important;
@@ -1060,7 +1091,7 @@ a:visited {
 	color: #201430 !important;
 }
 
-.markdown-rendered .search-highlight>div {
+.markdown-rendered .search-highlight > div {
 	position: absolute;
 	pointer-events: none;
 	box-shadow: 0 0 0px 2px #87ff5f;
@@ -1069,7 +1100,7 @@ a:visited {
 	z-index: 999;
 }
 
-.markdown-rendered .search-highlight>div.is-active {
+.markdown-rendered .search-highlight > div.is-active {
 	box-shadow: 0 0 0px 3px #87ff5f;
 	opacity: 1;
 	z-index: 999;
@@ -1114,7 +1145,7 @@ a:visited {
 }
 
 .omnisearch-result__title,
-.omnisearch-result__title>span {
+.omnisearch-result__title > span {
 	color: #9cda7c;
 }
 
@@ -1203,17 +1234,25 @@ a:visited {
 }
 
 /* less prominent pinned icon */
-.workspace .mod-root .workspace-tab-header.is-active .workspace-tab-header-status-icon {
+.workspace
+	.mod-root
+	.workspace-tab-header.is-active
+	.workspace-tab-header-status-icon {
 	opacity: 0.6 !important;
 }
 
-.workspace .mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
+.workspace
+	.mod-root
+	.workspace-tab-header:not(.is-active)
+	.workspace-tab-header-inner-close-button {
 	position: absolute;
 	right: 6px;
 	margin-top: 0px;
 }
 
-.workspace-tabs .workspace-tab-header:not(.is-stacked) .workspace-tab-header-inner {
+.workspace-tabs
+	.workspace-tab-header:not(.is-stacked)
+	.workspace-tab-header-inner {
 	box-sizing: border-box !important;
 	border-bottom: 4px solid #151515 !important;
 	margin: 0px 4px 0 0 !important;
@@ -1221,7 +1260,10 @@ a:visited {
 	height: 100%;
 }
 
-.mod-sidedock .workspace-tabs .workspace-tab-header:not(.is-stacked) .workspace-tab-header-inner {
+.mod-sidedock
+	.workspace-tabs
+	.workspace-tab-header:not(.is-stacked)
+	.workspace-tab-header-inner {
 	border: 0 !important;
 
 	svg {
@@ -1297,8 +1339,12 @@ a:visited {
 	}
 }
 
-.is-focused.mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
-.is-focused.mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+.is-focused.mod-active
+	.workspace-tab-header.is-active
+	.workspace-tab-header-inner-icon,
+.is-focused.mod-active
+	.workspace-tab-header.is-active
+	.workspace-tab-header-inner-title {
 	color: #e1d6f8 !important;
 }
 
@@ -1471,7 +1517,9 @@ a:visited {
 	}
 }
 
-.workspace-tabs .workspace-tab-header-container .sidebar-toggle-button.mod-right {
+.workspace-tabs
+	.workspace-tab-header-container
+	.sidebar-toggle-button.mod-right {
 	padding: 0;
 	margin: 0 2px 0px 0px;
 	background: transparent !important;
@@ -1487,7 +1535,27 @@ a:visited {
 	}
 }
 
-.is-tablet .workspace-tabs.mod-stacked .workspace-tab-header-new-tab .workspace-tab-header-tab-list {
+.workspace-tabs.mod-stacked.mod-active,
+.workspace-tabs.mod-stacked,
+.mod-sidedock .workspace-tabs {
+	.workspace-tab-header-inner {
+		border-bottom: 0 !important;
+	}
+}
+
+/* tablet mode fixes */
+.is-tablet .beautitab .view-actions {
+	padding-top: 19px;
+}
+
+.is-tablet .expressive-code .copy button {
+	transform: scale(0.6) !important;
+}
+
+.is-tablet
+	.workspace-tabs.mod-stacked
+	.workspace-tab-header-new-tab
+	.workspace-tab-header-tab-list {
 	height: 33px !important;
 }
 
@@ -1509,15 +1577,6 @@ a:visited {
 	}
 }
 
-.workspace-tabs.mod-stacked.mod-active,
-.workspace-tabs.mod-stacked,
-.mod-sidedock .workspace-tabs {
-	.workspace-tab-header-inner {
-		border-bottom: 0 !important;
-	}
-}
-
-/* tablet mode */
 .is-tablet .workspace-drawer-header div,
 .is-tablet .workspace-drawer.is-pinned .workspace-drawer-header div {
 	color: #e1d6f8 !important;
@@ -1539,8 +1598,8 @@ select.dropdown {
 }
 
 .workspace-drawer-vault-name,
-.is-tablet .workspace-drawer-header>* *,
-.is-tablet .workspace-drawer.is-pinned .workspace-drawer-header>* * {
+.is-tablet .workspace-drawer-header > * *,
+.is-tablet .workspace-drawer.is-pinned .workspace-drawer-header > * * {
 	color: #d99145 !important;
 }
 
@@ -1630,7 +1689,7 @@ select.dropdown {
 
 .git-tools,
 .workspace-drawer-vault-actions,
-.view-content.node-insert-event>div,
+.view-content.node-insert-event > div,
 .nav-buttons-container {
 	background: #452f5c !important;
 
@@ -1646,10 +1705,14 @@ select.dropdown {
 }
 
 .tree-item-children {
-	padding-inline-start: var(--nav-item-children-padding-start,
-			var(--nav-item-children-padding-left));
-	margin-inline-start: var(--nav-item-children-margin-start,
-			var(--nav-item-children-margin-left));
+	padding-inline-start: var(
+		--nav-item-children-padding-start,
+		var(--nav-item-children-padding-left)
+	);
+	margin-inline-start: var(
+		--nav-item-children-margin-start,
+		var(--nav-item-children-margin-left)
+	);
 	border-inline-start: 2px solid #28163b;
 }
 
@@ -1716,10 +1779,6 @@ select.dropdown {
 .beautitab-quote,
 .beautitab-top {
 	background: none !important;
-}
-
-.is-tablet .beautitab .view-actions {
-	padding-top: 19px;
 }
 
 /*
