@@ -5,6 +5,7 @@
 .HyperMD-codeblock.ascii *,
 .HyperMD-codeblock.ascii .HyperMD-codeblock-bg,
 .cm-s-obsidian.ascii pre.HyperMD-codeblock,
+.HyperMD-codeblock .cm-line,
 .markdown-source-view.ascii pre,
 .markdown-source-view.ascii code,
 .markdown-source-view.ascii .cm-scroller pre,
@@ -16,14 +17,10 @@
 .is-live-preview.ascii div.HyperMD-codeblock-bg,
 .is-live-preview.ascii span.cm-inline-code {
   --code-normal: #e1d6f8;
-  --code-background: #000000;
   --indentation-guide-color: #000000;
   --indentation-guide-color-active: #000000;
-  --code-border-width: 0px;
-  --code-border-color: #000000;
-  --code-border-radius: 0px;
   overflow: visible !important;
-  line-height: 1em !important;
+  line-height: 1.2em !important;
   letter-spacing: -1px;
   .cm-lineWrapping {
     white-space: nowrap !important;
@@ -39,20 +36,20 @@
 .markdown-rendered.ascii pre code,
 .markdown-rendered.ascii code:not(pre code) {
   --code-normal: #e1d6f8;
-  --code-background: #000000;
   --indentation-guide-color: #000000;
   --indentation-guide-color-active: #000000;
-  --code-border-width: 0px;
-  --code-border-color: #000000;
-  --code-border-radius: 0px;
   letter-spacing: -1px;
   overflow: visible !important;
-  line-height: 0.95em !important;
+  line-height: 1.2em !important;
 
-  /* hide copy button */
   *[class*="button"] {
     display: none !important;
   }
+}
+ /* hide copy button */
+.edit-block-button,
+.block-language-ascii .copy {
+	display: none !important;
 }
 /* hide indents */
 .ascii .cm-indent {

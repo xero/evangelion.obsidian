@@ -1,0 +1,8 @@
+/* tablet.css
+ * personal preferences for tablet mode
+ */
+
+/* max sidebar width */
+.is-tablet .workspace-drawer {
+  max-width: 300px !important;
+}

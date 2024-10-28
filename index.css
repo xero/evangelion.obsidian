@@ -1,0 +1,60 @@
+/* index snip
+ * custom table highlights for tag index pages
+ */
+.cm-s-obsidian.index,
+.markdown-source-view.index,
+.markdown-source-view.index .cm-scroller,
+.is-live-preview.index,
+.markdown-rendered.index {
+  table thead {
+    border: 0;
+    tr,
+    td {
+      border: 0;
+    }
+  }
+
+  table {
+    width: 100% !important;
+    margin-top: 10px;
+
+    tbody {
+      height: fit-content;
+
+      td {
+        padding: 14px;
+        vertical-align: middle;
+        text-align: left;
+
+        &:nth-child(1) {
+          background: #281b36 !important;
+          font-size: 1.2em;
+          padding: 4px;
+
+          svg {
+						width: 32px;
+						height: 32px;
+						margin: 0 5px 0 10px;
+          }
+        }
+
+        &:nth-child(2) {
+          font-size: 1.15em;
+          color: #d99145;
+        }
+
+        ul li,
+        .HyperMD-list-line-1,
+        .HyperMD-list-line-2,
+        .HyperMD-list-line-3,
+        .HyperMD-list-line-4,
+        .HyperMD-list-line-5,
+        .HyperMD-list-line-6,
+        .HyperMD-list-line-7,
+        .HyperMD-list-line-8 {
+          margin-left: -2px;
+        }
+      }
+    }
+  }
+}

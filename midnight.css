@@ -3,7 +3,25 @@ body.midnight,
 .theme-light.midnight,
 .markdown-source-view.midnight,
 .markdown-preview-view.midnight,
-.markdown-source-view.midnight .cm-scroller {
-  --code-background: #000000;
-	background: #000000;
+.markdown-source-view.midnight .cm-scroller,
+.HyperMD-codeblock.midnight *,
+.HyperMD-codeblock.midnight .HyperMD-codeblock-bg,
+.cm-s-obsidian.midnight pre.HyperMD-codeblock,
+.HyperMD-codeblock .cm-line,
+.markdown-source-view.midnight pre,
+.markdown-source-view.midnight code,
+.markdown-source-view.midnight .cm-scroller pre,
+.markdown-source-view.midnight .cm-scroller code,
+.markdown-rendered.midnight pre,
+.markdown-rendered.midnight code,
+.markdown-rendered.midnight pre code,
+.markdown-rendered.midnight code:not(pre code),
+.is-live-preview.midnight div.HyperMD-codeblock-bg,
+.is-live-preview.midnight span.cm-inline-code {
+  --code-normal: #e1d6f8;
+  --indentation-guide-color: #000000;
+  --indentation-guide-color-active: #000000;
+	background: #000000 !important;
+	border: 0 !important;
+	border-color: #000000 !important;
 }

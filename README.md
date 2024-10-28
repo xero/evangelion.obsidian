@@ -13,6 +13,8 @@
 - [icons.css](https://github.com/xero/evangelion.obsidian/blob/snippets/icons.css) - make the iconize file tree images bigger _(global)_
 - [big-icons.css](https://github.com/xero/evangelion.obsidian/blob/snippets/big-icons.css) - enlarges all svg icons in the current document
 - [icon-sheet.css](https://github.com/xero/evangelion.obsidian/blob/snippets/icon-sheet.css) - special table and svg styles used for testing my custom icons
+- [index](https://github.com/xero/evangelion.obsidian/blob/snippets/index,css) - special css table style for #tag index pages
+- [tablet](https://github.com/xero/evangelion.obsidian/blob/snippets/tablet.css) - max sidebar size for tablet mode (global)
 
 ### installing
 
