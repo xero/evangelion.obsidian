@@ -57,9 +57,40 @@ the icons used in these screenshots are [available here](https://github.com/xero
 
 this repo also contains my [snippets library](https://github.com/xero/evangelion.obsidian/tree/snippets) in the `snippets` branch. many of these elements were a personal choice, so i removed them from the main theme. featuring: tablet sizing fixes, japanese stylings, icon sizings, hiding elements, amiga fonts, ui related tweaks for ascii art, and more
 
+# installing
+
+## in app
+
+1. open **Settings**
+2. under **Appearance → Themes**, select `Manage`
+3. search for _"evangelion"_
+4. select `"Install and use"`
+
+## manually
+
+1. download the [newest release](https://github.com/xero/evangelion.obsidian/releases/)
+2. create an evangelion theme folder
+	- `~vault/.obsidian/themes/evangelion`
+3. copy `theme.css` and `manifest.json` to the folder
+4. restart obsidian, then open **Settings**
+5. under **Appearance → Themes**, select _"evangelion"_
+
+# updating
+
+1. open **Settings**
+2. under **Appearance → Current community themes**, select `Check for updates`.
+
+> **note:** the manual method will not automatically update in app
+
+# uninstalling
+
+1. open **Settings**
+2. under **Appearance → Themes**, select `Manage`
+3. select _"evangelion"_ and then select `Uninstall`.
+
 # contributing
 
-pr's are welcomed!
+[pr](https://github.com/xero/evangelion.obsidian/pulls)'s are welcomed!
 
 ```
    N E O N       _            ____
@@ -76,12 +107,6 @@ pr's are welcomed!
              | /     |   :      | /     /__/
              |/                 |/   E V A N G E L I O N
 ```
-
-# todo
-
-## submit to the theme gallery
-
-waiting for approval on [pr #4302](https://github.com/obsidianmd/obsidian-releases/pull/4304) to [`obsidian-releases`](https://github.com/obsidianmd/obsidian-releases#community-theme)
 
 # license
 
