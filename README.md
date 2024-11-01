@@ -35,7 +35,7 @@ a ui theme and colorscheme for [obsidian](https://obsidian.md) inspired by neon 
 ### new tab
 ![](https://raw.githubusercontent.com/xero/evangelion.obsidian/previews/preview-new-tab.png)
 
-## supported plugins
+# supported plugins
 
 this theme explicitly restyles the following plugins:
 
@@ -49,24 +49,26 @@ this theme explicitly restyles the following plugins:
 - [obsidian-trash-explorer](https://github.com/proog/obsidian-trash-explorer)
 - [obsidian-reading-view-enhancer](https://github.com/Galacsh/obsidian-reading-view-enhancer/)
 
-## svg icons
-
-the icons used in these screenshots are [available here](https://github.com/xero/svg-icons).
+# extras & options
 
 # css snippets
 
 this repo also contains my [snippets library](https://github.com/xero/evangelion.obsidian/tree/snippets) in the `snippets` branch. many of these elements were a personal choice, so i removed them from the main theme. featuring: tablet sizing fixes, japanese stylings, icon sizings, hiding elements, amiga fonts, ui related tweaks for ascii art, and more
 
-# installing
+## svg icons
 
-## in app
+the icons used in these screenshots are [available here](https://github.com/xero/svg-icons).
+
+# usage
+
+## installing in app
 
 1. open **Settings**
 2. under **Appearance → Themes**, select `Manage`
 3. search for _"evangelion"_
-4. select `"Install and use"`
+4. select `Install and use`
 
-## manually
+## installing manually
 
 1. download the [newest release](https://github.com/xero/evangelion.obsidian/releases/)
 2. create an evangelion theme folder
@@ -75,14 +77,14 @@ this repo also contains my [snippets library](https://github.com/xero/evangelion
 4. restart obsidian, then open **Settings**
 5. under **Appearance → Themes**, select _"evangelion"_
 
-# updating
+## updating
 
 1. open **Settings**
 2. under **Appearance → Current community themes**, select `Check for updates`.
 
 > **note:** the manual method will not automatically update in app
 
-# uninstalling
+## uninstalling
 
 1. open **Settings**
 2. under **Appearance → Themes**, select `Manage`
@@ -90,7 +92,7 @@ this repo also contains my [snippets library](https://github.com/xero/evangelion
 
 # contributing
 
-[pr](https://github.com/xero/evangelion.obsidian/pulls)'s are welcomed!
+[pr's are welcomed](https://github.com/xero/evangelion.obsidian/pulls)!
 
 ```
    N E O N       _            ____
